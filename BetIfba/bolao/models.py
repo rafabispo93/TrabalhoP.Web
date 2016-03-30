@@ -5,8 +5,8 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 class User(models.Model):
     login = models.CharField(max_length=50,primary_key=True)
     name = models.CharField(max_length=200)
-    password = models.CharField(min_lenght=5,max_length=15)
-    adm = models.BooleanField(default=false)
+    password = models.CharField(max_length=15)
+    adm = models.BooleanField(default=False)
     credits = models.FloatField(default=10.0, validators = [MinValueValidator(0.0)])
 
     def __str__(self):
