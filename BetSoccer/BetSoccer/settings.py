@@ -51,7 +51,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
-ROOT_URLCONF = 'BetIfba.urls'
+ROOT_URLCONF = 'BetSoccer.urls'
 
 TEMPLATES = [
     {
@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'BetIfba.wsgi.application'
+WSGI_APPLICATION = 'BetSoccer.wsgi.application'
 
 
 # Database
