@@ -5,6 +5,10 @@
     <title>BetSoccer</title>
 </head>
 <body>
-
+{% for match in match %}
+    <div id="jogos">
+        <p id="jogo">{{match.homeTeam}}: {{match.homeScore}} X {{match.visitorScore}} {{match.visitorTeam}}</p>
+    </div>
+{% endfor %}
 </body>
 </html>
