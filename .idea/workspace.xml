@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29c2e0c4-8d28-4870-a333-e57215a3402f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BetIfba/BetIfba/settings.py" afterPath="$PROJECT_DIR$/BetIfba/BetIfba/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myvenv/pyvenv.cfg" afterPath="$PROJECT_DIR$/myvenv/pyvenv.cfg" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BetIfba/bolao/models/models.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BetIfba/bolao/models.py" afterPath="$PROJECT_DIR$/BetIfba/bolao/models.py" />
     </list>
     <ignored path="TrabalhoP.Web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,10 +35,10 @@
         </entry>
       </file>
       <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BetIfba/bolao/models/models.py">
+        <entry file="file://$PROJECT_DIR$/BetIfba/bolao/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19889502">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.15469614">
+              <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -63,6 +63,7 @@
         <option value="$PROJECT_DIR$/BetIfba/bolao/models/user.py" />
         <option value="$PROJECT_DIR$/BetIfba/bolao/models/users.py" />
         <option value="$PROJECT_DIR$/BetIfba/bolao/models/models.py" />
+        <option value="$PROJECT_DIR$/BetIfba/bolao/models.py" />
       </list>
     </option>
   </component>
@@ -144,28 +145,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="bolao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrabalhoP.Web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrabalhoP.Web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BetIfba" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bolao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -377,10 +356,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BetIfba/bolao/models/models.py">
+    <entry file="file://$PROJECT_DIR$/BetIfba/bolao/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19889502">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.15469614">
+          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
           <folding />
         </state>
       </provider>
