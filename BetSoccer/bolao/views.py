@@ -5,3 +5,5 @@ from .models import Match
 def index(request):
     match= Match.objects.all()
     return render(request, 'bolao/index.html', {'match':match})
+def bolao(request):
+    return render(request, 'bolao/jogos.html',{})
