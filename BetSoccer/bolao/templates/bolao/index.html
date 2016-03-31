@@ -32,6 +32,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="logo">
 				BetSoccer
 			</div>
+
 			<div class="header">
 				<div class="menu">
 
@@ -53,7 +54,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	    	<div class="container">
 				<h1>BetSoccer</h1>
 				<p>Onde seu palpite vale muito!</p>
-
+				<form class="form-signin">
+					<input type="text" class="form-control" placeholder="Email" required autofocus>
+					<input type="password" class="form-control" placeholder="Password" required>
+					<button class="btn btn-lg btn-primary btn-block" type="submit">
+						Sign in
+					</button>
+				</form>
 			 </div>
 		</div>
 	</div>
@@ -61,6 +68,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!--Responsive-tabs-Starts-Here-->
 	</div>
 	<div class="website">
+		<p id="top-web">Últimos Resultados</p>
+
+		{% for match in match %}
+			<div class="jogos">
+				<p id="jogo">{{match.homeTeam}}: {{match.homeScore}} X {{match.visitorScore}} {{match.visitorTeam}}</p>
+			</div>
+		{% endfor %}
 
 	</div>
 	<!--end-website-->
@@ -69,21 +83,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="footer">
 		<div class="container">
 			<div class="footer-main">
-				<h3>CADASTRE-SE AQUI</h3>
+				<h3>Solicite seu Acesso!</h3>
 				<div class="footer-bottom">
 					<div class="col-md-4 footer-bottom-left">
 
 					</div>
 					<div class="col-md-8 footer-bottom-right">
-						<small>Enter Your Email here</small>
+						<small>Escreva seu Email aqui</small>
 						<div class="contact-text">
 							<input type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}"/>
-							<input type="submit" value="SUBMIT" >
+							<input type="submit" value="ENVIAR" >
 						</div>
 					</div>
 					<div class="clearfix"></div>
 					<div class="ftr">
-						<p>DESIGN BY <a href="http://w3layouts.com/"> W3LAYOUTS</a></p>
+						<p>DESIGN BY BETSOCCER TEAM</p>
 					</div>
 				</div>
 			</div>
