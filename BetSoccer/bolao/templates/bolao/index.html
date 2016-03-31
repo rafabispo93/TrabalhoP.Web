@@ -1,14 +1,95 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <!DOCTYPE html>
-<html lang="en">
+{% load staticfiles %}
+{% load bootstrap_themes %}
+{% bootstrap_styles theme='default' type='min.css' %}
+{% bootstrap_styles theme='cosmo' type='css' %}
+{% bootstrap_styles theme='united' type='less' %}
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>BetSoccer</title>
+<title>BetSoccer</title>
+
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/bolao.css' %}">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'css/common.css' %}">
+	<link rel="stylesheet" href="{% static 'css/jquery.fancybox.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<script src="js/jquery-1.11.0.min.js"></script>
+<!---- start-smoth-scrolling---->
+
+<!---- start-smoth-scrolling---->
 </head>
 <body>
-{% for match in match %}
-    <div id="jogos">
-        <p id="jogo">{{match.homeTeam}}: {{match.homeScore}} X {{match.visitorScore}} {{match.visitorTeam}}</p>
-    </div>
-{% endfor %}
+	<div class="head" id="home">
+		<div class="container">
+			<div class="logo">
+				BetSoccer
+			</div>
+			<div class="header">
+				<div class="menu">
+
+					<ul class="nav" id="nav">
+						<li><a href="index.html">Página Inicial</a></li>
+						<li><a href="about.html">Painel do Administrador </a></li>
+						<li><a href="gallery.html">Bolao</a></li>
+
+					</ul>
+
+		<!----//End-top-nav-script---->
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<div class="banner"> 
+	    <div class="banner-text">
+	    	<div class="container">
+				<h1>BetSoccer</h1>
+				<p>Onde sua aposta vale muito!</p>
+
+			 </div>
+		</div>
+	</div>
+	<!--start-website-->
+	<!--Responsive-tabs-Starts-Here-->
+	</div>
+	<div class="website">
+
+	</div>
+	<!--end-website-->
+
+	<!--start-footer-->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-main">
+				<h3>CADASTRE-SE AQUI</h3>
+				<div class="footer-bottom">
+					<div class="col-md-4 footer-bottom-left">
+
+					</div>
+					<div class="col-md-8 footer-bottom-right">
+						<small>Enter Your Email here</small>
+						<div class="contact-text">
+							<input type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}"/>
+							<input type="submit" value="SUBMIT" >
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="ftr">
+						<p>DESIGN BY <a href="http://w3layouts.com/"> W3LAYOUTS</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	</div>
+	<!--end-footer-->
 </body>
 </html>
