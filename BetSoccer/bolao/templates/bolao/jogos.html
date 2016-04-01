@@ -4,22 +4,125 @@
 {% bootstrap_styles theme='default' type='min.css' %}
 {% bootstrap_styles theme='cosmo' type='css' %}
 {% bootstrap_styles theme='united' type='less' %}
-<html lang="en">
+
 <head>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<title>BetSoccer</title>
+
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="{% static 'css/bolao.css' %}">
-    <meta charset="UTF-8">
-    <title>BetSoccer</title>
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'css/common.css' %}">
+	<link rel="stylesheet" href="{% static 'css/jquery.fancybox.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<script src="js/jquery-1.11.0.min.js"></script>
+
+<!---- start-smoth-scrolling---->
+
+<!---- start-smoth-scrolling---->
 </head>
-<body>
-<div class="header">
-    <h1><a href="/">BetSoccer</a></h1>
-</div>
-{% for match in match %}
-    <div class="jogos">
-        <p id="jogo">{{match.homeTeam}}: {{match.homeScore}} X {{match.visitorScore}} {{match.visitorTeam}}</p>
+
+	<div class="head" id="home">
+		<div class="container">
+			<div class="logo">
+				BetSoccer
+			</div>
+
+			<div class="header">
+				<div class="menu">
+
+					<ul class="nav" id="nav">
+						<li><a href="index.html/">Página Inicial</a></li>
+						<li><a href="admin/">Painel do Administrador </a></li>
+						<li><a href="bolao/jogos.html">Bolao</a></li>
+
+					</ul>
+
+		<!----//End-top-nav-script---->
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+    <div class="site">
+   {% load staticfiles %}
+
+
+<!-- Glucose Data Table -->
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <table id="glucose-table" class="display responsive" width="100%">
+        <thead>
+          <tr>
+            <th class="all"><center>#</center></th>
+            <th class="all"><center>Time</center></th>
+            <th class="min-tablet"><center>Time</center></th>
+            <th class="min-tablet"><center>Data</center></th>
+            <th class="min-desktop"><center>Hora</center></th>
+            <th class="min-desktop"><center>Apostar</center></th>
+            <th class="all"></th>
+          </tr>
+         <tr>
+
+            <th class="all">
+                <center>
+                    {% for match in matchRegistration %}
+                        <p id="Id">{{match.id}}</p>
+                    {% endfor %}
+                </center>
+            </th>
+
+
+            <th class="all">
+                <center>
+                    {% for match in matchRegistration %}
+                        <p id="time1">{{match.homeTeam}}</p>
+                    {% endfor %}
+                </center>
+            </th>
+             <th class="all">
+                <center>
+                    {% for match in matchRegistration %}
+                        <p id="time2">{{match.visitorTeam}}</p>
+                    {% endfor %}
+                </center>
+            </th>
+              <th class="all">
+                <center>
+                    {% for match in matchRegistration %}
+                        <p id="data">{{match.date}}</p>
+                    {% endfor %}
+                </center>
+            </th>
+             <th class="all">
+                <center>
+                    {% for match in matchRegistration %}
+                        <p id="hora">{{match.hora}}</p>
+                    {% endfor %}
+                </center>
+            </th>
+
+             <th class="all">
+                <center>
+                    {% for match in matchRegistration %}
+                       <button class="apostar" id="submitAposta" type="submit" >
+						Apostar
+                       </button>
+                    <br/>
+                    {% endfor %}
+                </center>
+            </th>
+
+
+          </tr>
+        </thead>
+      </table>
+  </div>
+
+<!-- End Glucose Data Table -->
+
     </div>
-{% endfor %}
+        </div>
 </body>
 </html>

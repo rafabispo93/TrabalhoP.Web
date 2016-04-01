@@ -1,6 +1,7 @@
 from django.contrib import admin
-from .models import User,Match
+from .models import User,MatchRegistration,MatchResult
 # Register your models here.
 
 admin.site.register(User)
-admin.site.register(Match)
+admin.site.register(MatchResult)
+admin.site.register(MatchRegistration)

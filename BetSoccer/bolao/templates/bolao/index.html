@@ -71,12 +71,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</div>
 	<div class="website">
 		<p id="top-web">Últimos Resultados</p>
-
-		{% for match in match %}
+		{% for match in matchResult %}
 			<div class="jogos">
-				<p id="jogo">{{match.homeTeam}}: {{match.homeScore}} X {{match.visitorScore}} {{match.visitorTeam}}</p>
+				<p id="jogo">{{match.game.homeTeam}}: {{match.homeScore}} X {{match.visitorScore}} {{match.game.visitorTeam}}</p>
 			</div>
 		{% endfor %}
+
+
 
 	</div>
 	<!--end-website-->

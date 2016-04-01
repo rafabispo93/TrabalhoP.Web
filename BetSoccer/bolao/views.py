@@ -1,14 +1,15 @@
 from django.shortcuts import render
-from .models import Match,User
+from .models import MatchRegistration,MatchResult,User
 
 # Create your views here.
 
 def index(request):
-    match= Match.objects.all()
-    return render(request, 'bolao/index.html', {'match':match})
+    matchResult= MatchResult.objects.all()
+    matchRegistration= MatchRegistration.objects.all()
+    return render(request, 'bolao/index.html', {'matchResult':matchResult,'matchRegistration':matchRegistration})
 def bolao(request):
-    match= Match.objects.all()
-    return render(request, 'bolao/jogos.html', {'match':match})
+    matchRegistration= MatchRegistration.objects.all()
+    return render(request, 'bolao/jogos.html', {'matchRegistration':matchRegistration})
 def login(request):
     user = request.POST.get("username", "")
     password = request.POST.get("password", "")
