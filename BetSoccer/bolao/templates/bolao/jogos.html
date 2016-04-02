@@ -17,9 +17,6 @@
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
 	<script src="js/jquery-1.11.0.min.js"></script>
 
-<!---- start-smoth-scrolling---->
-
-<!---- start-smoth-scrolling---->
 </head>
 
 	<div class="head" id="home">
@@ -35,7 +32,10 @@
 						<li><a href="index.html/">Página Inicial</a></li>
 						<li><a href="admin/">Painel do Administrador </a></li>
 						<li><a href="bolao/jogos.html">Bolao</a></li>
-
+                        <div id="loginInfo">
+                        <p id="login-Name">Login: {{user}}</p>
+                        <p id="login-Credit">Crédito disponível: {{credito}}</p>
+                        </div>
 					</ul>
 
 		<!----//End-top-nav-script---->
@@ -55,12 +55,12 @@
       <table id="glucose-table" class="display responsive" width="100%">
         <thead>
           <tr>
-            <th class="all"><center>#</center></th>
-            <th class="all"><center>Time</center></th>
-            <th class="min-tablet"><center>Time</center></th>
-            <th class="min-tablet"><center>Data</center></th>
-            <th class="min-desktop"><center>Hora</center></th>
-            <th class="min-desktop"><center>Apostar</center></th>
+            <th class="tbIds"><center>#</center></th>
+            <th class="tbTime1"><center>Time</center></th>
+            <th class="tbTime2"><center>Time</center></th>
+            <th class="tbData"><center>Data</center></th>
+            <th class="tbHora"><center>Hora</center></th>
+            <th class="tbApostar"><center>Apostar</center></th>
             <th class="all"></th>
           </tr>
          <tr>
@@ -105,12 +105,16 @@
 
              <th class="all">
                 <center>
+                    <form action="/apostar/" method="POST">
+                    <input type="text" value={{credito}} name="login-Credito" hidden="true"/><input type="text" value={{user}} name="user-Credito"hidden="true" />
                     {% for match in matchRegistration %}
-                       <button class="apostar" id="submitAposta" type="submit" >
+                       <button class="apostar" id="submitAposta" type="submit">
 						Apostar
+                        {% csrf_token %}
                        </button>
                     <br/>
                     {% endfor %}
+                    </form>
                 </center>
             </th>
 
@@ -118,6 +122,7 @@
           </tr>
         </thead>
       </table>
+
   </div>
 
 <!-- End Glucose Data Table -->

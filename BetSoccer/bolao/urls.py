@@ -7,4 +7,5 @@ urlpatterns = [
     url(r'^bolao/jogos.html', views.bolao),
     url(r'^index.html', views.index),
     url(r'^login', views.login),
+    url(r'^apostar',views.apostar),
 ]
