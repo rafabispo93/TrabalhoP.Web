@@ -35,10 +35,9 @@ class MatchResult(models.Model):
 
 class Bet(models.Model):
     id = models.AutoField(primary_key=True)
-    _game = models.ForeignKey(MatchRegistration,on_delete = models.CASCADE,default=None)
-    userBets = models.ManyToManyField(User)
-    amountofBets = models.FloatField(default=0)
+    game = models.ForeignKey(MatchRegistration,on_delete = models.CASCADE,default=None)
+    userBets = models.ForeignKey(User,on_delete = models.CASCADE,default=None)
 
     def __str__(self):
-        return "Jogo: {}, Valor Acumulado: {} ".format(self.game,self.amountBets)
+        return "Jogo: {}, Usuário: {} ".format(self.game,self.userBets)
 

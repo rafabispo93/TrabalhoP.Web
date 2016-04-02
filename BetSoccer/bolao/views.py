@@ -1,10 +1,9 @@
 from django.shortcuts import render
-from .models import MatchRegistration,MatchResult,User
+from .models import MatchRegistration,MatchResult,User,Bet
 from django.http import HttpResponse
 
 # Create your views here.
-global user
-global credito
+
 def index(request):
     matchResult= MatchResult.objects.all()
     matchRegistration= MatchRegistration.objects.all()
@@ -25,8 +24,13 @@ def login(request):
 def apostar(request):
     matchRegistration= MatchRegistration.objects.all()
     userCredito =  User.objects.get(login =request.POST.get("user-Credito",""))
-    if userCredito.credits > 0.0 :
+    matchID = MatchRegistration.objects.get(id = request.POST.get("match-id",""))
+
+    if userCredito.credits > 0.0 and Bet(userBets = userCredito)== False :
         userCredito.credits = userCredito.credits - 5.0
         userCredito.save()
+        bet = Bet(game = matchID,userBets = userCredito)
+        bet.save()
+
 
     return render( request,'bolao/jogos.html', {'user':userCredito.login,'credito': userCredito.credits,'matchRegistration':matchRegistration} )
