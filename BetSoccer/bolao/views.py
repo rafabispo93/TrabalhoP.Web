@@ -24,13 +24,15 @@ def login(request):
 def apostar(request):
     matchRegistration= MatchRegistration.objects.all()
     userCredito =  User.objects.get(login =request.POST.get("user-Credito",""))
-    matchID = MatchRegistration.objects.get(id = request.POST.get("match-id",""))
-
-    if userCredito.credits > 0.0 and Bet(userBets = userCredito)== False :
-        userCredito.credits = userCredito.credits - 5.0
-        userCredito.save()
-        bet = Bet(game = matchID,userBets = userCredito)
-        bet.save()
-
+    matchID = MatchRegistration.objects.get(id =request.POST.get("match-id",""))
+    try:
+        check = Bet.objects.get(userBets = userCredito,game = matchID)
+        print(check)
+    except Bet.DoesNotExist:
+        if userCredito.credits > 0.0 :
+            bet = Bet(userBets = userCredito,game = matchID)
+            bet.save()
+            userCredito.credits = userCredito.credits - 5.0
+            userCredito.save()
 
     return render( request,'bolao/jogos.html', {'user':userCredito.login,'credito': userCredito.credits,'matchRegistration':matchRegistration} )

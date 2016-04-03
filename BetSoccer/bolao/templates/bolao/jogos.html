@@ -106,11 +106,12 @@
              <th class="all">
                 <center>
                     <form action="/apostar/" method="POST">
-                    <input type="text" value={{credito}} name="login-Credito" hidden="true"/><input type="text" value={{user}} name="user-Credito"hidden="true" />
+
 
                     {% for match in matchRegistration %}
-                       <button class="apostar" id="submitAposta" type="submit">
-                           <input type="text" value={{match.id}} name="match-id" hidden="true"/>
+                        <input type="text" value={{credito}} name="login-Credito" hidden="true"/><input type="text" value={{user}} name="user-Credito"hidden="true" />
+
+                       <button class="apostar" id="submitAposta" value={{match.id}} name="match-id"  type="submit">
                             Apostar
                             {% csrf_token %}
                        </button>
