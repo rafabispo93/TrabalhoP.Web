@@ -41,3 +41,10 @@ class Bet(models.Model):
     def __str__(self):
         return "Jogo: {}, Usuário: {} ".format(self.game,self.userBets)
 
+class Ranking(models.Model):
+    position = models.IntegerField(default = None,blank=True)
+    user = models.ForeignKey(User,blank=True,on_delete = models.CASCADE)
+
+    def __str__(self):
+        return "Posição: {} ".format(self.position)
+

@@ -52,7 +52,7 @@
 
   <div class="panel panel-default">
     <div class="panel-body">
-      <table id="glucose-table" class="display responsive" width="100%">
+      <table id="apostar-table" class="display responsive" width="100%">
         <thead>
           <tr>
             <th class="tbIds"><center>#</center></th>
@@ -130,6 +130,40 @@
 
 <!-- End Glucose Data Table -->
 
+    </div>
+    <div>
+        <table id="ranking-table"class="display responsive" width="100%">
+            <thead>
+                <tr>
+                    <th class="tb1"><center>Posição</center></th>
+                    <th class="tb2"><center>Usuário</center></th>
+                    <th class="tb3"><center>Créditos</center></th>
+                </tr>
+                <tr>
+                    <th class="tbPos">
+                        <center>
+                            {% for rnk in ranking %}
+                                <p>{{rnk.position}}</p>
+                            {% endfor %}
+                        </center>
+                    </th>
+                    <th class="tbUser">
+                        <center>
+                            {% for rnk in ranking %}
+                                <p>{{rnk.user.login}}</p>
+                            {% endfor %}
+                        </center>
+                    </th>
+                    <th class="tbCred">
+                        <center>
+                            {% for rnk in ranking %}
+                                <p>{{rnk.user.credits}}</p>
+                            {% endfor %}
+                        </center>
+                    </th>
+                </tr>
+            </thead>
+        </table>
     </div>
         </div>
 </body>
