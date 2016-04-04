@@ -37,6 +37,8 @@ class Bet(models.Model):
     id = models.AutoField(primary_key=True)
     game = models.ForeignKey(MatchRegistration,on_delete = models.CASCADE,default=None)
     userBets = models.ForeignKey(User,on_delete = models.CASCADE,default=None)
+    homeScore = models.CharField(max_length = 1,default = 0)
+    visitorScore = models.CharField(max_length = 1,default = 0)
 
     def __str__(self):
         return "Jogo: {}, Usuário: {} ".format(self.game,self.userBets)

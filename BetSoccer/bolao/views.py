@@ -44,6 +44,8 @@ def login(request):
     return index(request)
 
 def apostar(request):
+    scoreHome = request.POST.get("homeScore", "")
+    scoreVisitor = request.POST.get("visitorScore", "")
     matchRegistration= MatchRegistration.objects.all()
     userCredito =  User.objects.get(login =request.POST.get("user-Credito",""))
     matchID = MatchRegistration.objects.get(id =request.POST.get("match-id",""))
@@ -58,7 +60,7 @@ def apostar(request):
         print(check)
     except Bet.DoesNotExist:
         if userCredito.credits > 0.0 :
-            bet = Bet(userBets = userCredito,game = matchID)
+            bet = Bet(userBets = userCredito,game = matchID,homeScore = scoreHome, visitorScore = scoreVisitor)
             bet.save()
             userCredito.credits = userCredito.credits - 5.0
             userCredito.save()

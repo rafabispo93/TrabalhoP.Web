@@ -57,7 +57,9 @@
           <tr>
             <th class="tbIds"><center>#</center></th>
             <th class="tbTime1"><center>Time</center></th>
+            <th class="scoreTime1"><center></center></th>
             <th class="tbTime2"><center>Time</center></th>
+              <th class="scoreTime2"><center></center></th>
             <th class="tbData"><center>Data</center></th>
             <th class="tbHora"><center>Hora</center></th>
             <th class="tbApostar"><center>Apostar</center></th>
@@ -74,10 +76,25 @@
             </th>
 
 
+
+
+             <th class="all">
+                <center>
+                    {% for match in registerBet %}
+                        <p id="time1">
+                            {{match.homeTeam}}
+                        </p>
+                    {% endfor %}
+                </center>
+            </th>
             <th class="all">
                 <center>
                     {% for match in registerBet %}
-                        <p id="time1">{{match.homeTeam}}</p>
+                        <p id="placarHome">
+                           <span>
+                            <input id="placar" name="homeScore" type="text" style="width: 30px;"/>
+                            </span>
+                        </p>
                     {% endfor %}
                 </center>
             </th>
@@ -88,6 +105,19 @@
                     {% endfor %}
                 </center>
             </th>
+
+             <th class="all">
+                <center>
+                    {% for match in registerBet %}
+                        <p id="placarVisitor">
+                           <span>
+                            <input id="placar2" name="visitorScore" type="text" style="width: 30px;"/>
+                            </span>
+                        </p>
+                    {% endfor %}
+                </center>
+            </th>
+
               <th class="all">
                 <center>
                     {% for match in registerBet %}
