@@ -47,6 +47,12 @@ def apostar(request):
     matchRegistration= MatchRegistration.objects.all()
     userCredito =  User.objects.get(login =request.POST.get("user-Credito",""))
     matchID = MatchRegistration.objects.get(id =request.POST.get("match-id",""))
+    users = User.objects.all()
+    ranking = Ranking.objects.all()
+    ordered = users.order_by('-credits')
+    registerBet = RegisterBet.objects.all()
+    Ranking.objects.all().delete()
+
     try:
         check = Bet.objects.get(userBets = userCredito,game = matchID)
         print(check)
@@ -57,4 +63,20 @@ def apostar(request):
             userCredito.credits = userCredito.credits - 5.0
             userCredito.save()
 
-    return render( request,'bolao/jogos.html', {'user':userCredito.login,'credito': userCredito.credits,'matchRegistration':matchRegistration} )
+    for match in matchRegistration:
+        try:
+            MatchResult.objects.get(game = match)
+        except MatchResult.DoesNotExist:
+            register = RegisterBet(id = match.id,homeTeam = match.homeTeam,visitorTeam = match.visitorTeam,date = match.date,hora = match.hora)
+            register.save()
+    count = 1
+    for userRnk in ordered:
+        try:
+            Ranking.objects.get(user = userRnk)
+        except Ranking.DoesNotExist:
+            rank = Ranking(user = userRnk,position = count)
+            rank.save()
+            ranking.order_by('-user.credits')
+            count = count +1
+
+    return render( request,'bolao/jogos.html', {'user':userCredito.login,'credito': userCredito.credits,'registerBet':registerBet,'ranking':ranking} )
