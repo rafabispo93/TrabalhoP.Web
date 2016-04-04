@@ -67,7 +67,7 @@
 
             <th class="all">
                 <center>
-                    {% for match in matchRegistration %}
+                    {% for match in registerBet %}
                         <p id="Id">{{match.id}}</p>
                     {% endfor %}
                 </center>
@@ -76,28 +76,28 @@
 
             <th class="all">
                 <center>
-                    {% for match in matchRegistration %}
+                    {% for match in registerBet %}
                         <p id="time1">{{match.homeTeam}}</p>
                     {% endfor %}
                 </center>
             </th>
              <th class="all">
                 <center>
-                    {% for match in matchRegistration %}
+                    {% for match in registerBet %}
                         <p id="time2">{{match.visitorTeam}}</p>
                     {% endfor %}
                 </center>
             </th>
               <th class="all">
                 <center>
-                    {% for match in matchRegistration %}
+                    {% for match in registerBet %}
                         <p id="data">{{match.date}}</p>
                     {% endfor %}
                 </center>
             </th>
              <th class="all">
                 <center>
-                    {% for match in matchRegistration %}
+                    {% for match in registerBet %}
                         <p id="hora">{{match.hora}}</p>
                     {% endfor %}
                 </center>
@@ -108,7 +108,7 @@
                     <form action="/apostar/" method="POST">
 
 
-                    {% for match in matchRegistration %}
+                    {% for match in registerBet %}
                         <input type="text" value={{credito}} name="login-Credito" hidden="true"/><input type="text" value={{user}} name="user-Credito"hidden="true" />
 
                        <button class="apostar" id="submitAposta" value={{match.id}} name="match-id"  type="submit">

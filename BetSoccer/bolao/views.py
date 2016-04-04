@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import MatchRegistration,MatchResult,User,Bet,Ranking
+from .models import MatchRegistration,MatchResult,User,Bet,Ranking,RegisterBet
 from django.http import HttpResponse
 
 # Create your views here.
@@ -18,13 +18,20 @@ def login(request):
     ranking = Ranking.objects.all()
     matchRegistration= MatchRegistration.objects.all()
     ordered = users.order_by('-credits')
-    count = 1
+    registerBet = RegisterBet.objects.all()
     Ranking.objects.all().delete()
+
+    for match in matchRegistration:
+        try:
+            MatchResult.objects.get(game = match)
+        except MatchResult.DoesNotExist:
+            register = RegisterBet(id = match.id,homeTeam = match.homeTeam,visitorTeam = match.visitorTeam,date = match.date,hora = match.hora)
+            register.save()
+    count = 1
     for userRnk in ordered:
         try:
             Ranking.objects.get(user = userRnk)
         except Ranking.DoesNotExist:
-
             rank = Ranking(user = userRnk,position = count)
             rank.save()
             ranking.order_by('-user.credits')
@@ -33,7 +40,7 @@ def login(request):
     for _user in users:
         if _user.login==user and _user.password==password:
             credito = _user.credits
-            return render(request,'bolao/jogos.html',{'user':user,'credito': credito,'matchRegistration':matchRegistration,'ranking':ranking})
+            return render(request,'bolao/jogos.html',{'user':user,'credito': credito,'registerBet':registerBet,'ranking':ranking})
     return index(request)
 
 def apostar(request):

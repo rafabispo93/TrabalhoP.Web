@@ -48,3 +48,12 @@ class Ranking(models.Model):
     def __str__(self):
         return "Posição: {} ".format(self.position)
 
+class RegisterBet(models.Model):
+    id = models.AutoField(primary_key=True)
+    homeTeam = models.CharField(max_length=30)
+    visitorTeam = models.CharField(max_length=30)
+    date = models.CharField(max_length=10)
+    hora = models.CharField(max_length=6)
+
+    def __str__(self):
+        return "Time1: {} X Time2: {}, data: {},hora: {}".format(self.homeTeam,self.visitorTeam,self.date,self.hora)
