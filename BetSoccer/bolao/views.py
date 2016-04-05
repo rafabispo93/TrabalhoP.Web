@@ -10,9 +10,13 @@ def index(request):
     matchRegistration= MatchRegistration.objects.all()
     for match in matchResult: #para cada resultado testar se alguem acertou o placar,criar no match register a quantidade apostada nele, colocar no def apostar aumentar esse campo
         try:
-            betWinner = Bet.objects.get(homeScore = match.homeScore,visitorScore = match.visitorScore)
-            cred = betWinner.userBets(credits = credits + 5.0)
-            cred.save()
+            betWinner = Bet.objects.filter(homeScore = match.homeScore,visitorScore = match.visitorScore)
+            betWinnerCount = Bet.objects.filter(homeScore = match.homeScore,visitorScore = match.visitorScore).count
+            for x in betWinner:
+                cred = User.objects.get(id = betWinner.userBets.id)
+                cred.credits = cred.credits + (betWinner.game.amountOfCredits / betWinnerCount)
+                cred.save()
+                Bet.objects.get(game = x.game).delete()
         except Bet.DoesNotExist:
             print()
     return render(request, 'bolao/index.html', {'matchResult':matchResult,'matchRegistration':matchRegistration})
@@ -32,10 +36,14 @@ def login(request):
     for match in matchRegistration:
         try:
             MatchResult.objects.get(game = match)
-            RegisterBet.objects.get(game = match).delete()
+            try:
+                RegisterBet.objects.get(game = match).delete()
+            except RegisterBet.DoesNotExist:
+                print()
         except MatchResult.DoesNotExist:
             register = RegisterBet(id = match.id,homeTeam = match.homeTeam,visitorTeam = match.visitorTeam,date = match.date,hora = match.hora,game = match)
             register.save()
+
     count = 1
     for userRnk in ordered:
         try:
@@ -70,6 +78,8 @@ def apostar(request):
             bet.save()
             userCredito.credits = userCredito.credits - 5.0
             userCredito.save()
+            matchID.amountOfCredits = matchID.amountOfCredits + 5.0
+            matchID.save()
 
     for match in matchRegistration:
         try:

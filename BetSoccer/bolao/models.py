@@ -20,7 +20,7 @@ class MatchRegistration(models.Model):
     visitorTeam = models.CharField(max_length=30)
     date = models.CharField(max_length=10)
     hora = models.CharField(max_length=6)
-
+    amountOfCredits = models.FloatField(default=0.0, validators = [MinValueValidator(0.0)])
     def __str__(self):
         return "Time1: {} X Time2: {}, data: {},hora: {}".format(self.homeTeam,self.visitorTeam,self.date,self.hora)
 
