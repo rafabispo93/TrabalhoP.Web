@@ -11,7 +11,7 @@ class User(models.Model):
     credits = models.FloatField(default=10.0, validators = [MinValueValidator(0.0)])
 
     def __str__(self):
-        return "Nome: {}, Crédito: {} ".format(self.name,self.credits)
+        return "Login: {}, Crédito: {} ".format(self.login,self.credits)
 
 
 class MatchRegistration(models.Model):
@@ -37,8 +37,8 @@ class Bet(models.Model):
     id = models.AutoField(primary_key=True)
     game = models.ForeignKey(MatchRegistration,on_delete = models.CASCADE,default=None)
     userBets = models.ForeignKey(User,on_delete = models.CASCADE,default=None)
-    homeScore = models.CharField(max_length = 1,default = 0)
-    visitorScore = models.CharField(max_length = 1,default = 0)
+    homeScore = models.CharField(max_length = 2,default = 0)
+    visitorScore = models.CharField(max_length = 2,default = 0)
 
     def __str__(self):
         return "Jogo: {}, Usuário: {} ".format(self.game,self.userBets)
@@ -52,6 +52,7 @@ class Ranking(models.Model):
 
 class RegisterBet(models.Model):
     id = models.AutoField(primary_key=True)
+    game = models.ForeignKey(MatchRegistration,default=None)
     homeTeam = models.CharField(max_length=30)
     visitorTeam = models.CharField(max_length=30)
     date = models.CharField(max_length=10)

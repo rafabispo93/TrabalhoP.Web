@@ -109,21 +109,24 @@
                     {% endfor %}
                 </center>
             </th>
-            <th class="all">
+            <form action="/apostar/" method="POST">
+            <th>
+
                 <center>
+
                     {% for match in registerBet %}
                         <p id="placar">
                            <span>
-                            <input id="placar" name="homeScore" type="text" style="width: 30px;"/>X<input id="placar2" name="visitorScore" type="text" style="width: 30px;"/>
+                             <input type="text" name="homeScore{{ match.id }}" value="" style="width: 30px;"/>X<input  type="text" name="visitorScore{{ match.id }}" value=""  style="width: 30px;"/>
                             </span>
                         </p>
                     {% endfor %}
+
                 </center>
+
             </th>
             <th>
             <center>
-                    <form action="/apostar/" method="POST">
-
 
                     {% for match in registerBet %}
                         <input type="text" value={{credito}} name="login-Credito" hidden="true"/><input type="text" value={{user}} name="user-Credito"hidden="true" />
@@ -134,9 +137,9 @@
                        </button>
                     <br/>
                     {% endfor %}
-                    </form>
-                </center>
 
+                </center>
+            </form>
             </th>
 
 

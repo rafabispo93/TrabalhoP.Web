@@ -6,7 +6,15 @@ from django.http import HttpResponse
 
 def index(request):
     matchResult= MatchResult.objects.all()
+    betResult = Bet.objects.all()
     matchRegistration= MatchRegistration.objects.all()
+    for match in matchResult: #para cada resultado testar se alguem acertou o placar,criar no match register a quantidade apostada nele, colocar no def apostar aumentar esse campo
+        try:
+            betWinner = Bet.objects.get(homeScore = match.homeScore,visitorScore = match.visitorScore)
+            cred = betWinner.userBets(credits = credits + 5.0)
+            cred.save()
+        except Bet.DoesNotExist:
+            print()
     return render(request, 'bolao/index.html', {'matchResult':matchResult,'matchRegistration':matchRegistration})
 def bolao(request):
     matchRegistration= MatchRegistration.objects.all()
@@ -24,8 +32,9 @@ def login(request):
     for match in matchRegistration:
         try:
             MatchResult.objects.get(game = match)
+            RegisterBet.objects.get(game = match).delete()
         except MatchResult.DoesNotExist:
-            register = RegisterBet(id = match.id,homeTeam = match.homeTeam,visitorTeam = match.visitorTeam,date = match.date,hora = match.hora)
+            register = RegisterBet(id = match.id,homeTeam = match.homeTeam,visitorTeam = match.visitorTeam,date = match.date,hora = match.hora,game = match)
             register.save()
     count = 1
     for userRnk in ordered:
@@ -44,8 +53,6 @@ def login(request):
     return index(request)
 
 def apostar(request):
-    scoreHome = request.POST.get("homeScore", "")
-    scoreVisitor = request.POST.get("visitorScore", "")
     matchRegistration= MatchRegistration.objects.all()
     userCredito =  User.objects.get(login =request.POST.get("user-Credito",""))
     matchID = MatchRegistration.objects.get(id =request.POST.get("match-id",""))
@@ -54,13 +61,12 @@ def apostar(request):
     ordered = users.order_by('-credits')
     registerBet = RegisterBet.objects.all()
     Ranking.objects.all().delete()
-
     try:
         check = Bet.objects.get(userBets = userCredito,game = matchID)
-        print(check)
+
     except Bet.DoesNotExist:
         if userCredito.credits > 0.0 :
-            bet = Bet(userBets = userCredito,game = matchID,homeScore = scoreHome, visitorScore = scoreVisitor)
+            bet = Bet(userBets = userCredito,game = matchID,homeScore = request.POST.get("homeScore"+str(matchID.id),"") , visitorScore = request.POST.get("visitorScore"+str(matchID.id),""))
             bet.save()
             userCredito.credits = userCredito.credits - 5.0
             userCredito.save()
@@ -69,7 +75,7 @@ def apostar(request):
         try:
             MatchResult.objects.get(game = match)
         except MatchResult.DoesNotExist:
-            register = RegisterBet(id = match.id,homeTeam = match.homeTeam,visitorTeam = match.visitorTeam,date = match.date,hora = match.hora)
+            register = RegisterBet(id = match.id,homeTeam = match.homeTeam,visitorTeam = match.visitorTeam,date = match.date,hora = match.hora,game = match)
             register.save()
     count = 1
     for userRnk in ordered:
