@@ -57,11 +57,10 @@
           <tr>
             <th class="tbIds"><center>#</center></th>
             <th class="tbTime1"><center>Time</center></th>
-            <th class="scoreTime1"><center></center></th>
             <th class="tbTime2"><center>Time</center></th>
-              <th class="scoreTime2"><center></center></th>
             <th class="tbData"><center>Data</center></th>
             <th class="tbHora"><center>Hora</center></th>
+            <th class="scoreTime1"><center>Placar</center></th>
             <th class="tbApostar"><center>Apostar</center></th>
             <th class="all"></th>
           </tr>
@@ -75,9 +74,6 @@
                 </center>
             </th>
 
-
-
-
              <th class="all">
                 <center>
                     {% for match in registerBet %}
@@ -87,17 +83,7 @@
                     {% endfor %}
                 </center>
             </th>
-            <th class="all">
-                <center>
-                    {% for match in registerBet %}
-                        <p id="placarHome">
-                           <span>
-                            <input id="placar" name="homeScore" type="text" style="width: 30px;"/>
-                            </span>
-                        </p>
-                    {% endfor %}
-                </center>
-            </th>
+
              <th class="all">
                 <center>
                     {% for match in registerBet %}
@@ -106,16 +92,7 @@
                 </center>
             </th>
 
-             <th class="all">
-                <center>
-                    {% for match in registerBet %}
-                        <p id="placarVisitor">
-                           <span>
-                            <input id="placar2" name="visitorScore" type="text" style="width: 30px;"/>
-                            </span>
-                        </p>
-                    {% endfor %}
-                </center>
+
             </th>
 
               <th class="all">
@@ -132,9 +109,19 @@
                     {% endfor %}
                 </center>
             </th>
-
-             <th class="all">
+            <th class="all">
                 <center>
+                    {% for match in registerBet %}
+                        <p id="placar">
+                           <span>
+                            <input id="placar" name="homeScore" type="text" style="width: 30px;"/>X<input id="placar2" name="visitorScore" type="text" style="width: 30px;"/>
+                            </span>
+                        </p>
+                    {% endfor %}
+                </center>
+            </th>
+            <th>
+            <center>
                     <form action="/apostar/" method="POST">
 
 
@@ -149,6 +136,7 @@
                     {% endfor %}
                     </form>
                 </center>
+
             </th>
 
 
