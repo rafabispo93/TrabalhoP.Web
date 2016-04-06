@@ -32,6 +32,30 @@ def index(request):
                     Bet.objects.filter(game = u.game).delete()
             except Bet.DoesNotExist:
                 pass
+        if(match.homeScore < match.visitorScore):
+            try:
+                betVisitorWin = Bet.objects.filter(homeScore__lt=F('visitorScore'))
+                betVisitorWinCount = len(betVisitorWin)
+
+                for u in betVisitorWin:
+                    cred = User.objects.get(id = u.userBets.id)
+                    cred.credits = cred.credits + (u.game.amountOfCredits / betVisitorWinCount)
+                    cred.save()
+                    Bet.objects.filter(game = u.game).delete()
+            except Bet.DoesNotExist:
+                pass
+        if(match.homeScore == match.visitorScore):
+            try:
+                betDrawWin = Bet.objects.filter(homeScore=F('visitorScore'))
+                betDrawWinCount = len(betDrawWin)
+
+                for u in betDrawWin:
+                    cred = User.objects.get(id = u.userBets.id)
+                    cred.credits = cred.credits + (u.game.amountOfCredits / betDrawWinCount)
+                    cred.save()
+                    Bet.objects.filter(game = u.game).delete()
+            except Bet.DoesNotExist:
+                pass
 
 
     return render(request, 'bolao/index.html', {'matchResult':matchResult,'matchRegistration':matchRegistration})
