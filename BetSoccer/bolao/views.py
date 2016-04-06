@@ -1,24 +1,39 @@
 from django.shortcuts import render
 from .models import MatchRegistration,MatchResult,User,Bet,Ranking,RegisterBet
 from django.http import HttpResponse
+from django.db.models import F
 
 # Create your views here.
 
 def index(request):
     matchResult= MatchResult.objects.all()
-    betResult = Bet.objects.all()
     matchRegistration= MatchRegistration.objects.all()
-    for match in matchResult: #para cada resultado testar se alguem acertou o placar,criar no match register a quantidade apostada nele, colocar no def apostar aumentar esse campo
+    for match in matchResult:
         try:
             betWinner = Bet.objects.filter(homeScore = match.homeScore,visitorScore = match.visitorScore)
-            betWinnerCount = Bet.objects.filter(homeScore = match.homeScore,visitorScore = match.visitorScore).count
+            betWinnerCount = len(betWinner)
             for x in betWinner:
-                cred = User.objects.get(id = betWinner.userBets.id)
-                cred.credits = cred.credits + (betWinner.game.amountOfCredits / betWinnerCount)
+                cred = User.objects.get(id = x.userBets.id)
+                cred.credits = cred.credits + (x.game.amountOfCredits / betWinnerCount)
                 cred.save()
-                Bet.objects.get(game = x.game).delete()
-        except Bet.DoesNotExist:
-            print()
+                Bet.objects.filter(game = x.game).delete()
+        except betWinner.DoesNotExist:
+            pass
+    for match in matchResult:
+        if(match.homeScore > match.visitorScore):
+            try:
+                betHomeWin = Bet.objects.filter(homeScore__gt=F('visitorScore'))
+                betHomeWinCount = len(betHomeWin)
+
+                for u in betHomeWin:
+                    cred = User.objects.get(id = u.userBets.id)
+                    cred.credits = cred.credits + (u.game.amountOfCredits / betHomeWinCount)
+                    cred.save()
+                    Bet.objects.filter(game = u.game).delete()
+            except Bet.DoesNotExist:
+                pass
+
+
     return render(request, 'bolao/index.html', {'matchResult':matchResult,'matchRegistration':matchRegistration})
 def bolao(request):
     matchRegistration= MatchRegistration.objects.all()
