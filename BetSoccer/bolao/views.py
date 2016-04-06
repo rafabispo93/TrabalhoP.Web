@@ -56,7 +56,12 @@ def index(request):
                     Bet.objects.filter(game = u.game).delete()
             except Bet.DoesNotExist:
                 pass
-
+        betNone = Bet.objects.all()
+        for n in betNone:
+            cred = User.objects.get(id = n.userBets.id)
+            cred.credits = cred.credits + 5.0
+            cred.save()
+            Bet.objects.filter(game = n.game).delete()
 
     return render(request, 'bolao/index.html', {'matchResult':matchResult,'matchRegistration':matchRegistration})
 def bolao(request):
