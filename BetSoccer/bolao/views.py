@@ -72,9 +72,6 @@ def index(request):
                 Bet.objects.filter(game = n.game).delete()
 
     return render(request, 'bolao/index.html', {'matchResult':matchResult,'matchRegistration':matchRegistration})
-def bolao(request):
-    matchRegistration= MatchRegistration.objects.all()
-    return render(request, 'bolao/jogos.html', {'matchRegistration':matchRegistration})
 def login(request):
     user = request.POST.get("username", "")
     password = request.POST.get("password", "")

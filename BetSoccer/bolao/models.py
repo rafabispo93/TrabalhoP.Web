@@ -31,7 +31,7 @@ class MatchResult(models.Model):
     visitorScore = models.IntegerField(blank=False,default=0)
 
     def __str__(self):
-        return "Time1: {} X {} :Time2 ".format(self.homeScore,self.visitorScore)
+        return "{}: {} X {} :{} ".format(self.game.homeTeam,self.homeScore,self.visitorScore,self.game.visitorTeam)
 
 class Bet(models.Model):
     id = models.AutoField(primary_key=True)
