@@ -8,60 +8,68 @@ from django.db.models import F
 def index(request):
     matchResult= MatchResult.objects.all()
     matchRegistration= MatchRegistration.objects.all()
+    count = 0
     for match in matchResult:
         try:
-            betWinner = Bet.objects.filter(homeScore = match.homeScore,visitorScore = match.visitorScore)
+            betWinner = Bet.objects.filter(homeScore = match.homeScore,visitorScore = match.visitorScore,game = match.game)
             betWinnerCount = len(betWinner)
-            for x in betWinner:
-                cred = User.objects.get(id = x.userBets.id)
-                cred.credits = cred.credits + (x.game.amountOfCredits / betWinnerCount)
-                cred.save()
-                Bet.objects.filter(game = x.game).delete()
+            if(betWinnerCount !=0):
+                for x in betWinner:
+                    cred = User.objects.get(id = x.userBets.id)
+                    cred.credits = cred.credits + (x.game.amountOfCredits / betWinnerCount)
+                    cred.save()
+                    Bet.objects.filter(game = x.game).delete()
         except betWinner.DoesNotExist:
             pass
     for match in matchResult:
-        if(match.homeScore > match.visitorScore):
+        if match.homeScore > match.visitorScore:
+            count = count +1
             try:
-                betHomeWin = Bet.objects.filter(homeScore__gt=F('visitorScore'))
+                betHomeWin = Bet.objects.filter(homeScore__gt=F('visitorScore'), game = match.game )
                 betHomeWinCount = len(betHomeWin)
-
-                for u in betHomeWin:
-                    cred = User.objects.get(id = u.userBets.id)
-                    cred.credits = cred.credits + (u.game.amountOfCredits / betHomeWinCount)
-                    cred.save()
-                    Bet.objects.filter(game = u.game).delete()
-            except Bet.DoesNotExist:
+                if(betHomeWinCount !=0):
+                    for u in betHomeWin:
+                        cred = User.objects.get(id = u.userBets.id)
+                        cred.credits = cred.credits + (u.game.amountOfCredits / betHomeWinCount)
+                        cred.save()
+                        Bet.objects.filter(game = u.game).delete()
+            except betHomeWin.DoesNotExist:
                 pass
-        if(match.homeScore < match.visitorScore):
+
+        elif match.homeScore < match.visitorScore:
+            count = count +1
             try:
-                betVisitorWin = Bet.objects.filter(homeScore__lt=F('visitorScore'))
+                betVisitorWin = Bet.objects.filter(homeScore__lt=F('visitorScore'), game = match.game)
                 betVisitorWinCount = len(betVisitorWin)
-
-                for u in betVisitorWin:
-                    cred = User.objects.get(id = u.userBets.id)
-                    cred.credits = cred.credits + (u.game.amountOfCredits / betVisitorWinCount)
-                    cred.save()
-                    Bet.objects.filter(game = u.game).delete()
-            except Bet.DoesNotExist:
+                if(betVisitorWinCount !=0):
+                    for u in betVisitorWin:
+                        cred = User.objects.get(id = u.userBets.id)
+                        cred.credits = cred.credits + (u.game.amountOfCredits / betVisitorWinCount)
+                        cred.save()
+                        Bet.objects.filter(game = u.game).delete()
+            except betVisitorWin.DoesNotExist:
                 pass
-        if(match.homeScore == match.visitorScore):
+
+        elif match.homeScore == match.visitorScore:
+            count = count +1
             try:
-                betDrawWin = Bet.objects.filter(homeScore=F('visitorScore'))
+                betDrawWin = Bet.objects.filter(homeScore=F('visitorScore'), game = match.game)
                 betDrawWinCount = len(betDrawWin)
-
-                for u in betDrawWin:
-                    cred = User.objects.get(id = u.userBets.id)
-                    cred.credits = cred.credits + (u.game.amountOfCredits / betDrawWinCount)
-                    cred.save()
-                    Bet.objects.filter(game = u.game).delete()
-            except Bet.DoesNotExist:
+                if(betDrawWinCount !=0):
+                    for u in betDrawWin:
+                        cred = User.objects.get(id = u.userBets.id)
+                        cred.credits = cred.credits + (u.game.amountOfCredits / betDrawWinCount)
+                        cred.save()
+                        Bet.objects.filter(game = u.game).delete()
+            except betDrawWin.DoesNotExist:
                 pass
-        betNone = Bet.objects.all()
+
+        betNone = Bet.objects.filter(game = match.game)
         for n in betNone:
-            cred = User.objects.get(id = n.userBets.id)
-            cred.credits = cred.credits + 5.0
-            cred.save()
-            Bet.objects.filter(game = n.game).delete()
+                cred = User.objects.get(id = n.userBets.id)
+                cred.credits = cred.credits + 5.0
+                cred.save()
+                Bet.objects.filter(game = n.game).delete()
 
     return render(request, 'bolao/index.html', {'matchResult':matchResult,'matchRegistration':matchRegistration})
 def bolao(request):
