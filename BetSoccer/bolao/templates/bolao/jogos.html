@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 {% load staticfiles %}
 {% load bootstrap_themes %}
 {% bootstrap_styles theme='default' type='min.css' %}
@@ -18,7 +19,7 @@
 	<script src="js/jquery-1.11.0.min.js"></script>
 
 </head>
-
+<body class="bodyAll">
 	<div class="head" id="home">
 		<div class="container">
 			<div class="logo">
@@ -48,10 +49,12 @@
 
 
 <!-- Glucose Data Table -->
-
+    <center><h1>Jogos</h1></center>
   <div class="panel panel-default">
+
     <div class="panel-body">
       <table id="apostar-table" class="display responsive" width="100%">
+
         <thead>
           <tr>
             <th class="tbIds"><center>#</center></th>
@@ -153,6 +156,7 @@
     </div>
     <div>
         <table id="ranking-table"class="display responsive" width="100%">
+            <center><h1>Ranking</h1></center>
             <thead>
                 <tr>
                     <th class="tb1"><center>Posição</center></th>
