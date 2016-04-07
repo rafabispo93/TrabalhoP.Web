@@ -2,51 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29c2e0c4-8d28-4870-a333-e57215a3402f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/css/common.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/css/jquery.fancybox.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/abt-2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/abt-3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/abt-4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/abt-img.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/approach.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/banner-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/banner-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/blog1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/blog2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/blog3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/fancybox_sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/g1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/g2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/g3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/g4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/marker.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/men.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/menu-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/msg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/news-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/news-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/news-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/one-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/one-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/one-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/one-4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/recent-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/recent-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/recent-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/spl-img.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/strength-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/t1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/t2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/t3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/t4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/t5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/t6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/images/up-arrow.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/css/bolao.css" afterPath="$PROJECT_DIR$/BetSoccer/bolao/static/css/bolao.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BetSoccer/bolao/templates/bolao/index.html" afterPath="$PROJECT_DIR$/BetSoccer/bolao/templates/bolao/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BetSoccer/bolao/templates/bolao/jogos.html" afterPath="$PROJECT_DIR$/BetSoccer/bolao/templates/bolao/jogos.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BetSoccer/db.sqlite3" afterPath="$PROJECT_DIR$/BetSoccer/db.sqlite3" />
     </list>
     <ignored path="TrabalhoP.Web.iws" />
@@ -100,11 +56,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jogos.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.42541435">
+              <caret line="86" column="49" selection-start-line="86" selection-start-column="49" selection-end-line="86" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jogos.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/templates/bolao/jogos.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24695459">
-              <caret line="51" column="35" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
+            <state vertical-scroll-proportion="-19.413794">
+              <caret line="68" column="13" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -120,10 +86,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer-banner.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/static/images/footer-banner.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.037037">
+              <caret line="39" column="60" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -160,13 +129,13 @@
         <option value="$PROJECT_DIR$/BetSoccer/BetSoccer/settings.py" />
         <option value="$PROJECT_DIR$/BetSoccer/bolao/admin.py" />
         <option value="$PROJECT_DIR$/BetSoccer/bolao/models.py" />
-        <option value="$PROJECT_DIR$/BetSoccer/bolao/views.py" />
         <option value="$PROJECT_DIR$/BetSoccer/bolao/urls.py" />
         <option value="$PROJECT_DIR$/BetSoccer/bolao/static/css/common.css" />
         <option value="$PROJECT_DIR$/BetSoccer/bolao/static/css/jquery.fancybox.css" />
         <option value="$PROJECT_DIR$/BetSoccer/bolao/templates/bolao/index.html" />
         <option value="$PROJECT_DIR$/BetSoccer/bolao/static/css/bolao.css" />
         <option value="$PROJECT_DIR$/BetSoccer/bolao/templates/bolao/jogos.html" />
+        <option value="$PROJECT_DIR$/BetSoccer/bolao/views.py" />
       </list>
     </option>
   </component>
@@ -230,7 +199,47 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BetSoccer" />
+              <option name="myItemId" value="myvenv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TrabalhoP.Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TrabalhoP.Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myvenv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TrabalhoP.Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TrabalhoP.Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myvenv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site-packages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -245,84 +254,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="BetSoccer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bolao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrabalhoP.Web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrabalhoP.Web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BetSoccer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bolao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bolao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrabalhoP.Web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrabalhoP.Web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BetSoccer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bolao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrabalhoP.Web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrabalhoP.Web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BetSoccer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bolao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -502,9 +433,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18229716" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18229716" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -782,32 +713,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.037037">
-          <caret line="33" column="110" selection-start-line="33" selection-start-column="110" selection-end-line="33" selection-end-column="110" />
-          <folding>
-            <element signature="e#24#52#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.6666665">
           <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
           <folding>
             <element signature="e#0#32#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.666666">
-          <caret line="73" column="113" selection-start-line="73" selection-start-column="113" selection-end-line="73" selection-end-column="113" />
-          <folding>
-            <element signature="e#0#35#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -835,14 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/templates/bolao/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-30.448277">
-          <caret line="106" column="14" selection-start-line="106" selection-start-column="14" selection-end-line="106" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.5172415">
@@ -864,10 +767,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/templates/bolao/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-30.448277">
+          <caret line="106" column="14" selection-start-line="106" selection-start-column="14" selection-end-line="106" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/templates/bolao/jogos.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24695459">
-          <caret line="51" column="35" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
+        <state vertical-scroll-proportion="-19.413794">
+          <caret line="68" column="13" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.037037">
+          <caret line="39" column="60" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42541435">
+          <caret line="86" column="49" selection-start-line="86" selection-start-column="49" selection-end-line="86" selection-end-column="49" />
           <folding />
         </state>
       </provider>
