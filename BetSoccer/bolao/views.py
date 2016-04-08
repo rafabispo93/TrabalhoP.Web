@@ -19,6 +19,9 @@ def index(request):
                     cred.credits = cred.credits + (x.game.amountOfCredits / betWinnerCount)
                     cred.save()
                     Bet.objects.filter(game = x.game).delete()
+                zero = MatchRegistration.objects.get(id = match.game.id)
+                zero.amountOfCredits = 0
+                zero.save()
         except betWinner.DoesNotExist:
             pass
     for match in matchResult:
@@ -33,6 +36,9 @@ def index(request):
                         cred.credits = cred.credits + (u.game.amountOfCredits / betHomeWinCount)
                         cred.save()
                         Bet.objects.filter(game = u.game).delete()
+                    zero = MatchRegistration.objects.get(id = match.game.id)
+                    zero.amountOfCredits = 0
+                    zero.save()
             except betHomeWin.DoesNotExist:
                 pass
 
@@ -47,6 +53,9 @@ def index(request):
                         cred.credits = cred.credits + (u.game.amountOfCredits / betVisitorWinCount)
                         cred.save()
                         Bet.objects.filter(game = u.game).delete()
+                    zero = MatchRegistration.objects.get(id = match.game.id)
+                    zero.amountOfCredits = 0
+                    zero.save()
             except betVisitorWin.DoesNotExist:
                 pass
 
@@ -61,6 +70,9 @@ def index(request):
                         cred.credits = cred.credits + (u.game.amountOfCredits / betDrawWinCount)
                         cred.save()
                         Bet.objects.filter(game = u.game).delete()
+                    zero = MatchRegistration.objects.get(id = match.game.id)
+                    zero.amountOfCredits = 0
+                    zero.save()
             except betDrawWin.DoesNotExist:
                 pass
 
@@ -70,6 +82,12 @@ def index(request):
                 cred.credits = cred.credits + 5.0
                 cred.save()
                 Bet.objects.filter(game = n.game).delete()
+        zero = MatchRegistration.objects.get(id = match.game.id)
+        zero.amountOfCredits = 0
+        zero.save()
+    if matchResult.all() ==10:
+       delete = matchResult.get().delete()[0]
+       delete.save()
 
     return render(request, 'bolao/index.html', {'matchResult':matchResult,'matchRegistration':matchRegistration})
 def login(request):
