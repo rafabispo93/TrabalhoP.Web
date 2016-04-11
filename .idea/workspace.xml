@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29c2e0c4-8d28-4870-a333-e57215a3402f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BetSoccer/bolao/messages.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BetSoccer/db.sqlite3" afterPath="$PROJECT_DIR$/BetSoccer/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BetSoccer/bolao/static/css/bolao.css" afterPath="$PROJECT_DIR$/BetSoccer/bolao/static/css/bolao.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BetSoccer/bolao/admin.py" afterPath="$PROJECT_DIR$/BetSoccer/bolao/admin.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BetSoccer/bolao/templates/bolao/index.html" afterPath="$PROJECT_DIR$/BetSoccer/bolao/templates/bolao/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BetSoccer/bolao/templates/bolao/jogos.html" afterPath="$PROJECT_DIR$/BetSoccer/bolao/templates/bolao/jogos.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BetSoccer/bolao/urls.py" afterPath="$PROJECT_DIR$/BetSoccer/bolao/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BetSoccer/bolao/views.py" afterPath="$PROJECT_DIR$/BetSoccer/bolao/views.py" />
     </list>
     <ignored path="TrabalhoP.Web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
               <folding>
                 <element signature="e#24#65#0" expanded="true" />
               </folding>
@@ -43,7 +45,7 @@
         <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/admin.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+              <caret line="1" column="54" selection-start-line="1" selection-start-column="54" selection-end-line="1" selection-end-column="54" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -54,8 +56,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/templates/bolao/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-22.041666">
-              <caret line="67" column="10" selection-start-line="52" selection-start-column="4" selection-end-line="67" selection-end-column="10" />
+            <state vertical-scroll-proportion="-22.5">
+              <caret line="75" column="37" selection-start-line="75" selection-start-column="37" selection-end-line="75" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -64,7 +66,7 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/static/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.607142">
+            <state vertical-scroll-proportion="0.0">
               <caret line="630" column="21" selection-start-line="628" selection-start-column="4" selection-end-line="630" selection-end-column="21" />
               <folding />
             </state>
@@ -75,11 +77,32 @@
         <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+              <caret line="129" column="33" selection-start-line="129" selection-start-column="33" selection-end-line="129" selection-end-column="33" />
               <folding>
-                <marker date="1460405738231" expanded="true" signature="230:333" placeholder="..." />
-                <marker date="1460405738231" expanded="true" signature="4143:4182" placeholder="..." />
+                <element signature="e#0#35#0" expanded="true" />
+                <marker date="1460416282000" expanded="true" signature="226:329" placeholder="..." />
+                <marker date="1460416282000" expanded="true" signature="4184:4251" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="messages.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/messages.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.060728744">
+              <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BetSoccer/BetSoccer/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="39" column="21" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -104,10 +127,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jogos.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="jogos.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/templates/bolao/jogos.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39748955">
+            <state vertical-scroll-proportion="0.0">
               <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
               <folding>
                 <marker date="1460406804576" expanded="true" signature="5127:6324" placeholder="..." />
@@ -121,8 +144,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -148,14 +171,15 @@
         <option value="$PROJECT_DIR$/BetSoccer/BetSoccer/urls.py" />
         <option value="$PROJECT_DIR$/BetSoccer/BetSoccer/settings.py" />
         <option value="$PROJECT_DIR$/BetSoccer/bolao/models.py" />
-        <option value="$PROJECT_DIR$/BetSoccer/bolao/urls.py" />
         <option value="$PROJECT_DIR$/BetSoccer/bolao/static/css/common.css" />
         <option value="$PROJECT_DIR$/BetSoccer/bolao/static/css/jquery.fancybox.css" />
-        <option value="$PROJECT_DIR$/BetSoccer/bolao/views.py" />
-        <option value="$PROJECT_DIR$/BetSoccer/bolao/admin.py" />
-        <option value="$PROJECT_DIR$/BetSoccer/bolao/templates/bolao/index.html" />
         <option value="$PROJECT_DIR$/BetSoccer/bolao/static/css/bolao.css" />
         <option value="$PROJECT_DIR$/BetSoccer/bolao/templates/bolao/jogos.html" />
+        <option value="$PROJECT_DIR$/BetSoccer/bolao/urls.py" />
+        <option value="$PROJECT_DIR$/BetSoccer/bolao/templates/bolao/index.html" />
+        <option value="$PROJECT_DIR$/BetSoccer/bolao/admin.py" />
+        <option value="$PROJECT_DIR$/BetSoccer/bolao/views.py" />
+        <option value="$PROJECT_DIR$/BetSoccer/bolao/messages.py" />
       </list>
     </option>
   </component>
@@ -189,6 +213,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -253,61 +278,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bolao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bolao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrabalhoP.Web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrabalhoP.Web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BetSoccer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bolao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrabalhoP.Web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrabalhoP.Web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BetSoccer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="BetSoccer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -503,17 +479,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
-          <folding>
-            <marker date="1460405738231" expanded="true" signature="230:333" placeholder="..." />
-            <marker date="1460405738231" expanded="true" signature="4143:4182" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/templates/bolao/jogos.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -581,8 +546,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1460405738231" expanded="true" signature="230:333" placeholder="..." />
-            <marker date="1460405738231" expanded="true" signature="4143:4182" placeholder="..." />
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1460416282000" expanded="true" signature="226:329" placeholder="..." />
+            <marker date="1460416282000" expanded="true" signature="4184:4251" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -638,8 +604,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
           <folding>
-            <marker date="1460405738231" expanded="true" signature="230:333" placeholder="..." />
-            <marker date="1460405738231" expanded="true" signature="4143:4182" placeholder="..." />
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1460416282000" expanded="true" signature="226:329" placeholder="..." />
+            <marker date="1460416282000" expanded="true" signature="4184:4251" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -716,8 +683,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
           <folding>
-            <marker date="1460405738231" expanded="true" signature="230:333" placeholder="..." />
-            <marker date="1460405738231" expanded="true" signature="4143:4182" placeholder="..." />
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1460416282000" expanded="true" signature="226:329" placeholder="..." />
+            <marker date="1460416282000" expanded="true" signature="4184:4251" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -839,13 +807,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BetSoccer/BetSoccer/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.022099448">
-          <caret line="39" column="21" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BetSoccer/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -853,41 +814,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-          <folding>
-            <element signature="e#24#65#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
-          <folding>
-            <marker date="1460405738231" expanded="true" signature="230:333" placeholder="..." />
-            <marker date="1460405738231" expanded="true" signature="4143:4182" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.06882591">
           <caret line="22" column="19" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/templates/bolao/jogos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+          <folding>
+            <marker date="1460406804576" expanded="true" signature="5127:6324" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/static/css/bolao.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -900,37 +848,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/templates/bolao/index.html">
+    <entry file="file://$PROJECT_DIR$/BetSoccer/BetSoccer/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.041666">
-          <caret line="67" column="10" selection-start-line="52" selection-start-column="4" selection-end-line="67" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="21" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.607142">
+        <state vertical-scroll-proportion="0.0">
           <caret line="630" column="21" selection-start-line="628" selection-start-column="4" selection-end-line="630" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/static/css/bolao.css">
+    <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/templates/bolao/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="22" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="22" />
+        <state vertical-scroll-proportion="-22.5">
+          <caret line="75" column="37" selection-start-line="75" selection-start-column="37" selection-end-line="75" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/templates/bolao/jogos.html">
+    <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39748955">
-          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="54" selection-start-line="1" selection-start-column="54" selection-end-line="1" selection-end-column="54" />
           <folding>
-            <marker date="1460406804576" expanded="true" signature="5127:6324" placeholder="..." />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="129" column="33" selection-start-line="129" selection-start-column="33" selection-end-line="129" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1460416282000" expanded="true" signature="226:329" placeholder="..." />
+            <marker date="1460416282000" expanded="true" signature="4184:4251" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <folding>
+            <element signature="e#24#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BetSoccer/bolao/messages.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.060728744">
+          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>

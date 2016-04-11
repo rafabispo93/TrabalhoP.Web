@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from .models import MatchRegistration,MatchResult,User,Bet,Ranking,RegisterBet
-from django.http import HttpResponse
+from .messages import  Messages
 from django.db.models import F
+
 
 # Create your views here.
 
@@ -88,8 +89,9 @@ def index(request):
     if matchResult.all() ==10:
        delete = matchResult.get().delete()[0]
        delete.save()
+    messageLogin = Messages.getMessageLogin()
+    return render(request, 'bolao/index.html', {'matchResult':matchResult,'matchRegistration':matchRegistration,'messageLogin':messageLogin})
 
-    return render(request, 'bolao/index.html', {'matchResult':matchResult,'matchRegistration':matchRegistration})
 def login(request):
     user = request.POST.get("username", "")
     password = request.POST.get("password", "")
@@ -120,11 +122,12 @@ def login(request):
             rank.save()
             ranking.order_by('-user.credits')
             count = count +1
-
     for _user in users:
+
         if _user.login==user and _user.password==password:
             credito = _user.credits
             return render(request,'bolao/jogos.html',{'user':user,'credito': credito,'registerBet':registerBet,'ranking':ranking})
+    Messages.setMessageLogin(None,"Login Inválido")
     return index(request)
 
 def apostar(request):
