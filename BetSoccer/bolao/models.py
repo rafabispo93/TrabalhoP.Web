@@ -21,7 +21,7 @@ class MatchRegistration(models.Model):
     date = models.CharField(max_length=10)
     hora = models.CharField(max_length=6)
     amountOfCredits = models.FloatField(default=0.0, validators = [MinValueValidator(0.0)])
-    message = models.CharField(max_length=300,default="")
+    message = models.CharField(max_length=300,default="Aposta Disponível",blank = True)
     def __str__(self):
         return "Time1: {} X Time2: {}, data: {},hora: {}".format(self.homeTeam,self.visitorTeam,self.date,self.hora)
 

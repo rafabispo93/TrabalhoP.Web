@@ -62,7 +62,7 @@
   <div class="panel panel-default">
 
     <div class="panel-body">
-      <table id="apostar-table" class="display responsive" width="100%">
+      <table id="apostar-table" class="display responsive" width="100%" style="margin: 10px;">
 
         <thead>
           <tr>
@@ -73,6 +73,7 @@
             <th class="tbHora"><center>Hora</center></th>
             <th class="scoreTime1"><center>Placar</center></th>
             <th class="tbApostar"><center>Apostar</center></th>
+            <th class="tbApostar"><center>Disponibilidade</center></th>
             <th class="all"></th>
           </tr>
          <tr>
@@ -80,7 +81,7 @@
             <th class="all">
                 <center>
                     {% for match in registerBet %}
-                        <p id="Id">{{match.id}}</p>
+                        <p id="Id" style="margin: 10px;">{{match.id}}</p>
                     {% endfor %}
                 </center>
             </th>
@@ -88,7 +89,7 @@
              <th class="all">
                 <center>
                     {% for match in registerBet %}
-                        <p id="time1">
+                        <p id="time1" style="margin: 10px;">
                             {{match.homeTeam}}
                         </p>
                     {% endfor %}
@@ -98,7 +99,7 @@
              <th class="all">
                 <center>
                     {% for match in registerBet %}
-                        <p id="time2">{{match.visitorTeam}}</p>
+                        <p id="time2" style="margin: 10px;">{{match.visitorTeam}}</p>
                     {% endfor %}
                 </center>
             </th>
@@ -109,14 +110,14 @@
               <th class="all">
                 <center>
                     {% for match in registerBet %}
-                        <p id="data">{{match.date}}</p>
+                        <p id="data" style="margin: 10px;">{{match.date}}</p>
                     {% endfor %}
                 </center>
             </th>
              <th class="all">
                 <center>
                     {% for match in registerBet %}
-                        <p id="hora">{{match.hora}}</p>
+                        <p id="hora" style="margin: 10px;">{{match.hora}}</p>
                     {% endfor %}
                 </center>
             </th>
@@ -142,19 +143,28 @@
                     {% for match in registerBet %}
                         <input type="text" value={{credito}} name="login-Credito" hidden="true"/><input type="text" value={{user}} name="user-Credito"hidden="true" />
 
-                       <button class="apostar" id="submitAposta" value={{match.id}} name="match-id"  type="submit">
+                       <p><button class="apostar" id="submitAposta" value={{match.id}} name="match-id"  type="submit">
                             Apostar
                             {% csrf_token %}
-                       </button>
-                    {{ match.message }}
-                    <br/>
+
+                       </button></p>
+
+
+
                     {% endfor %}
 
 
                 </center>
             </form>
             </th>
+            <th class="all">
+                <center>
+                    {% for match in registerBet %}
+                        <p id="dsp" style="margin: 13px;">{{ match.game.message }}</p>
 
+                    {% endfor %}
+                </center>
+            </th>
 
           </tr>
         </thead>

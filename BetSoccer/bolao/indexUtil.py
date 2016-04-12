@@ -30,7 +30,7 @@ class IndexUtil:
     def betWinOther(self):
         for match in self.matchResult:
             if match.homeScore > match.visitorScore:
-                count = count +1
+                self.count = self.count +1
                 try:
                     betHomeWin = Bet.objects.filter(homeScore__gt=F('visitorScore'), game = match.game )
                     betHomeWinCount = len(betHomeWin)
@@ -47,7 +47,7 @@ class IndexUtil:
                     pass
 
             elif match.homeScore < match.visitorScore:
-                count = count +1
+                self.count = self.count +1
                 try:
                     betVisitorWin = Bet.objects.filter(homeScore__lt=F('visitorScore'), game = match.game)
                     betVisitorWinCount = len(betVisitorWin)
@@ -64,7 +64,7 @@ class IndexUtil:
                     pass
 
             elif match.homeScore == match.visitorScore:
-                count = count +1
+                self.count = self.count +1
                 try:
                     betDrawWin = Bet.objects.filter(homeScore=F('visitorScore'), game = match.game)
                     betDrawWinCount = len(betDrawWin)
@@ -90,6 +90,6 @@ class IndexUtil:
             zero.amountOfCredits = 0
             zero.save()
         if self.matchResult.all() ==10:
-           delete = matchResult.get().delete()[0]
+           delete = self.matchResult.get().delete()[0]
            delete.save()
 
