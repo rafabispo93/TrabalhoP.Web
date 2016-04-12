@@ -146,8 +146,10 @@
                             Apostar
                             {% csrf_token %}
                        </button>
+                    {{ match.message }}
                     <br/>
                     {% endfor %}
+
 
                 </center>
             </form>
