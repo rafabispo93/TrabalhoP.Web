@@ -1,7 +1,8 @@
 class Messages:
     messageLogin = ""
     def __init__(self):
-        self.messageLogin =""
+        pass
+
     def setMessageLogin(self,msg):
         self.messageLogin = msg
 
