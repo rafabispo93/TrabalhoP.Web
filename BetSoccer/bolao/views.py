@@ -37,10 +37,8 @@ def apostar(request):
     aposta.apostarRefresh()
     try:
         check = Bet.objects.get(userBets = userCredito,game = matchID)
-        if check:
-            mssg = MatchRegistration.objects.get(id =matchID.id)
-            mssg.message = "Já realizou aposta"
-            mssg.save()
+        
+
     except Bet.DoesNotExist:
         if userCredito.credits > 0.0 :
             bet = Bet(userBets = userCredito,game = matchID,homeScore = request.POST.get("homeScore"+str(matchID.id),"") , visitorScore = request.POST.get("visitorScore"+str(matchID.id),""))
@@ -49,6 +47,9 @@ def apostar(request):
             userCredito.save()
             matchID.amountOfCredits = matchID.amountOfCredits + 5.0
             matchID.save()
+            mssg = MatchRegistration.objects.get(id =matchID.id)
+            mssg.message = "Já realizou aposta"
+            mssg.save()
 
 
 
