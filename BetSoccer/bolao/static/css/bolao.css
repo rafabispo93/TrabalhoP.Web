@@ -137,8 +137,13 @@ button {
   }
 
 
-#ranking-table{
+#apostar-table{
+}
 
-background-color: #FFFFFF;
-
+#jogo {
+	color: #fff;
+	font-size: 15px;
+	font-weight: 400;
+	font-family: 'Raleway', sans-serif;
+	letter-spacing: 3px;
 }

@@ -18,11 +18,13 @@ def index(request):
 def login(request):
     user = request.POST.get("username", "")
     password = request.POST.get("password", "")
-
     log = Login(user,password)
     log.organizeLogin()
+    registerBet = RegisterBet.objects.all()
+
+
     if log.organizeLogin() ==1:
-        return render(request,'bolao/jogos.html',{'user':log.user,'credito': log.credito,'registerBet':log.registerBet,'ranking':log.ranking})
+        return render(request,'bolao/jogos.html',{'user':log.user,'credito': log.credito,'registerBet':registerBet,'ranking':log.ranking})
 
     else:
         return index(request)
@@ -32,12 +34,10 @@ def apostar(request):
     userCredito =  User.objects.get(login =request.POST.get("user-Credito",""))
     matchID = MatchRegistration.objects.get(id =request.POST.get("match-id",""))
     Ranking.objects.all().delete()
-
     aposta = Aposta(request.POST.get("user-Credito",""),request.POST.get("match-id",""))
     aposta.apostarRefresh()
     try:
         check = Bet.objects.get(userBets = userCredito,game = matchID)
-
 
     except Bet.DoesNotExist:
         if userCredito.credits > 0.0 :
@@ -47,10 +47,6 @@ def apostar(request):
             userCredito.save()
             matchID.amountOfCredits = matchID.amountOfCredits + 5.0
             matchID.save()
-            mssg = MatchRegistration.objects.get(id =matchID.id)
-            mssg.message = "Já realizou aposta"
-            mssg.save()
 
 
-
-    return render( request,'bolao/jogos.html', {'user':userCredito.login,'credito': userCredito.credits,'registerBet':aposta.registerBet,'ranking':aposta.ranking,'message':matchID.message} )
+    return render( request,'bolao/jogos.html', {'user':userCredito.login,'credito': userCredito.credits,'registerBet':aposta.registerBet,'ranking':aposta.ranking} )

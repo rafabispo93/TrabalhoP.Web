@@ -46,4 +46,4 @@ class Login:
             if _user.login==self.user and _user.password==self.passw:
                 self.credito = _user.credits
                 return 1
-
+        return 2

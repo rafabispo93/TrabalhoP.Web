@@ -30,7 +30,6 @@
 				<div class="menu">
 
 					<ul class="nav" id="nav">
-						<li><a href="/admin/">Painel do Administrador </a></li>
                         <div id="loginInfo">
                         <li><a>Login: {{user}}</a></li>
                         <li><a>Crédito disponível: {{credito}}</a></li>
@@ -58,6 +57,8 @@
 	</div>
 
 <!-- Glucose Data Table -->
+
+
     <center><h1>Jogos</h1></center>
   <div class="panel panel-default">
 
@@ -73,7 +74,6 @@
             <th class="tbHora"><center>Hora</center></th>
             <th class="scoreTime1"><center>Placar</center></th>
             <th class="tbApostar"><center>Apostar</center></th>
-            <th class="tbApostar"><center>Disponibilidade</center></th>
             <th class="all"></th>
           </tr>
          <tr>
@@ -149,21 +149,11 @@
 
                        </button></p>
 
-
-
                     {% endfor %}
 
 
                 </center>
             </form>
-            </th>
-            <th class="all">
-                <center>
-                    {% for match in registerBet %}
-                        <p id="dsp" style="margin: 13px;">{{ match.game.message }}</p>
-
-                    {% endfor %}
-                </center>
             </th>
 
           </tr>
@@ -176,6 +166,9 @@
 <!-- End Glucose Data Table -->
 
     </div>
+<div class="footer">
+		<div class="container">
+			<div class="footer-jogos">
     <div>
         <table id="ranking-table"class="display responsive" width="100%">
             <center><h1>Ranking</h1></center>
@@ -213,9 +206,7 @@
     </div>
         </div>
 
-<div class="footer">
-		<div class="container">
-			<div class="footer-jogos">
+
                 <div class="ftr">
 						<p>DESIGN BY BETSOCCER TEAM</p>
 					</div>
