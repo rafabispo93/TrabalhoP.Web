@@ -37,7 +37,7 @@ def apostar(request):
     aposta.apostarRefresh()
     try:
         check = Bet.objects.get(userBets = userCredito,game = matchID)
-        
+
 
     except Bet.DoesNotExist:
         if userCredito.credits > 0.0 :
