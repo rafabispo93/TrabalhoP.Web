@@ -5,5 +5,4 @@ from .models import User,MatchRegistration,MatchResult,RegisterBet,Bet
 admin.site.register(User)
 admin.site.register(MatchResult)
 admin.site.register(MatchRegistration)
-admin.site.register(Bet)
-admin.site.register(RegisterBet)
+
